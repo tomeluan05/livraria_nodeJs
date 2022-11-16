@@ -1,0 +1,76 @@
+<%- include('../partials/header'); %>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row mt-5 pt-3 bg-dark text-white">
+                    <div class="col-6">
+                        <h1>Lista de Livros</h1>
+                    </div>
+
+                    <div class="col-6 text-right">
+                        <a href="/livros/cadastrarLivros" class="btn btn-primary my-3 text-center">Inserir Livro</a>
+                    </div>
+                </div>
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Valor Unitário</th>
+                            <th>Código de barras</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(resultado == "") { %>
+                            <tr>
+                                <div class="alert alert-warning">Não ha dados cadastrados</div>
+                            </tr>
+                        <%} else { resultado.forEach(function(livro) { %>
+                            <tr>
+                                <td>
+                                    <%= livro.nome %>
+                                </td>
+                                <td>
+                                    <%= livro.valorUnitario %>
+                                </td>
+                                <td>
+                                    <%= livro.codigoBarra %>
+                                </td>
+                                <td>
+                                    <a href="/livros/editarLivro/<%=livro._id%>" class="btn btn-sm btn-success">Editar</a>
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                        Excluir
+                                    </button>
+  
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Excluir livro</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            Você tem certeza que deseja excluir esse livro?
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fechar</button>
+                                            <a href="/livros/deletarLivro/<%=livro._id%>" class="btn btn-sm btn-danger">Excluir</a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<%- include('../partials/footer'); %>
