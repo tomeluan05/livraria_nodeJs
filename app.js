@@ -4,7 +4,7 @@ const app = express()
 
 const PORT = 5000
 
-mongoose.connect("mongodb+srv://<user>:<password>@cluster0.m9ons.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect("mongodb+srv://tomeluan05:tomeluan05@cluster0.m9ons.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname, 'views')

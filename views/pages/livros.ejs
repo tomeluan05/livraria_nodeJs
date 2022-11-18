@@ -3,16 +3,16 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="row mt-2 pt-3 bg-dark text-white">
+            <div class="row ml-1 mr-1 mt-4 pt-2 bg-dark text-white listar-livros">
                 <div class="col-6">
-                    <h1>Lista de Livros</h1>
+                    <h1 class="titulo">Lista de Livros</h1>
                 </div>
 
                 <div class="col-6 text-right">
                     <a href="/livros/cadastrarLivros" class="btn btn-primary my-3 text-center">Inserir Livro</a>
                 </div>
             </div>
-            <table class="table table-sm table-hover">
+            <table class="table table-sm table-hover tabela">
                 <thead>
                     <tr class="text-center">
                         <th>Nome</th>
@@ -21,7 +21,7 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody class="text-center">
+                <tbody class="text-center tabela">
                     <% if(resultado == "") { %>
                     <tr>
                         <div class="alert alert-warning">Não ha dados cadastrados</div>

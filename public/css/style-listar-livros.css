@@ -1,0 +1,15 @@
+.tabela{
+    background-color: white;
+}
+
+.listar-livros{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 790px){
+    .titulo{
+        font-size: 27px;
+        width: 100vw;
+    }
+}

@@ -1,0 +1,23 @@
+.pagina-inicial{
+    background-image: url('../img/livraria-container.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    color: white;
+}
+
+@media screen and (max-width: 700px){
+    .pagina-inicial h1{
+        font-size: 27px;
+    }
+    
+    .pagina-inicial h3{
+        font-size: 22px;
+    }
+}
