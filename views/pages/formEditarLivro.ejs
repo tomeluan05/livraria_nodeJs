@@ -1,8 +1,9 @@
 <%- include('../partials/header'); %>
+<link rel="stylesheet" href="/css/style-editar-livros.css">
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="mt-5">Editar Livros</h1>
+            <h1 class="mt-5 teste">Editar Livros</h1>
             <form action="/livros/editarLivro" method="POST">
                 <div class="form-group">
                     <label for="nome">Nome</label>
@@ -17,7 +18,7 @@
                     <input type="text" id="codigoBarra" name="codigoBarra" class="form-control" placeholder="00000000" value="<%=resultado.codigoBarra%>">
                 </div>
                 <input type="hidden" name="id" value="<%=resultado._id%>">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Editar</button>
                 <a href="/livros" class="btn btn-secondary my-3 text-center">Voltar</a>
             </form>
         </div>

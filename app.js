@@ -10,6 +10,7 @@ app.set('view engine', 'ejs')
 app.set('views', __dirname, 'views')
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(express.static('public'))
 
 // Importando o router
 const livros_router = require('./routers/livros-router')

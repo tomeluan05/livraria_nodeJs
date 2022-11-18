@@ -3,6 +3,7 @@ const router = express.Router()
 
 const livrosController = require('../controllers/livros-controller')
 
+router.get('/paginaInicial', livrosController.pagina_inicial);
 router.get('/', livrosController.listar_livros);
 router.get('/cadastrarLivros', livrosController.cadastrar_livros_get);
 router.post('/cadastrarLivros', livrosController.cadastrar_livros_post);
