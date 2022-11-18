@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 
 mongoose.connect("mongodb+srv://tomeluan05:tomeluan05@cluster0.m9ons.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true})
 
