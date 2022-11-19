@@ -16,10 +16,6 @@ app.use(express.static('public'))
 const livros_router = require('./routers/livros-router')
 app.use('/livros', livros_router)
 
-app.get('/', (req, res)=>{
-    res.send('Página inicial')
-})
-
 app.listen(PORT, ()=>{
     console.log(`Servidor rodando na porta ${PORT}`)
 })

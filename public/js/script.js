@@ -13,3 +13,11 @@ function typeWrite(elemento){
 }
 
 typeWrite(titulo);
+
+
+
+
+// Data table
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
