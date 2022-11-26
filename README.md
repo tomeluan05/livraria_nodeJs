@@ -8,6 +8,8 @@ Projeto desenvolvido com o intuito de aprender a montar um CRUD com Node js
 ### Para rodar o projeto:
 - `npm start`
 
+### Abrindo o projeto no navegador:
+- `http://localhost:5000/livros/paginaInicial`
 
 https://user-images.githubusercontent.com/54185747/202958167-84699a45-dac0-4ae4-b791-79ca33fa17fc.mp4
 
